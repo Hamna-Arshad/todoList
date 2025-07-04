@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-List</title>
-</head>
-<body>
-    <p>todo page</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/todo.css" />
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="parent-div">
+        <div class="sidebar-parent">
+          <div class="sidebar-header">
+            <div class="menudiv">
+              <img
+                class="menubtn"
+                src="/images/menu.svg"
+                alt="menu"
+                title="Toggle Menu"
+              />
+              <span>Menu</span>
+            </div>
+          </div>
+          <div class="listOfbtns">
+            <a href="/">
+              <div class="stickywalldiv" title="Sticky Wall">
+                <img
+                  class="stickywallbtn"
+                  src="/images/notes.svg"
+                  alt="notes"
+                />
+                <span>Sticky Wall</span>
+              </div>
+            </a>
+            <a href="/todoList">
+              <div class="tododiv" title="Todo-List">
+                <img class="todobtn" src="/images/list.svg" alt="list" />
+                <span>Todo-List</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="header-div">
+          <h1>Todo List</h1>
+          <hr class="horizontal-line" />
+        </div>
+        <div class="child-div">
+          <div class="listitems"></div>
+          <button
+            title="Save Items"
+            class="savelistitem-button"
+            id="save-box"
+          ><img class="plus" src="/images/save.svg" alt="plus" />
+          </button>
+          <button
+            title="Add Item"
+            class="addlistitem-button"
+            id="plus-box"
+            onclick="addItems()"
+          >
+            <img class="plus" src="/images/plus.svg" alt="plus" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/todopage.js"></script>
+  </body>
 </html>

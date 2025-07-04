@@ -55,9 +55,9 @@ body {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
-  overflow: auto;
   justify-content: flex-start;
   position: relative;
+  overflow: auto;
 }
 /* header css */
 .header-div > h1 {
@@ -297,7 +297,7 @@ textarea:focus {
   flex-direction: column;
   position: relative;
 }
-.sidebar-header{
+.sidebar-header {
   position: absolute;
   padding-left: 15px;
   top: 10%;
@@ -311,67 +311,82 @@ textarea:focus {
   font-size: 25px;
   display: flex;
   flex-direction: column;
-  
 }
-.menudiv{
+.menudiv {
   padding-left: 15px;
   position: relative;
 }
 .menubtn,
-.menubtn > img{
+.menubtn > img {
   margin-right: 10px;
   width: 30px;
   height: 30px;
 }
-.menudiv>.menubtn{
+.menudiv > .menubtn {
   position: absolute;
   right: 15px;
   top: 9px;
   cursor: pointer;
 }
-.tododiv, .stickywalldiv{
+.tododiv,
+.stickywalldiv {
   align-items: center;
   padding: 20px;
   cursor: pointer;
   width: 100%;
-
 }
-.tododiv:hover, .stickywalldiv:hover{
-  background-color:  #ccc9c9;
+.tododiv:hover,
+.stickywalldiv:hover {
+  background-color: #ccc9c9;
 }
-.tododiv>span, .stickywalldiv>span{
+.tododiv > span,
+.stickywalldiv > span {
   margin-left: 10px;
 }
-.tododiv>img, .stickywalldiv>img{
+.tododiv > img,
+.stickywalldiv > img {
   width: 30px;
   height: 30px;
 }
-a{
+a {
   color: #000;
   text-decoration: none;
 }
-.sidebar-parent-toggle{
+.sidebar-parent-toggle {
   grid-column: 1 / 2;
   margin: 0 !important;
   padding: 0 !important;
   left: 9%;
   top: 0% !important;
 }
-.sidebar-header-btn-toggle{
+.sidebar-header-btn-toggle {
   top: 5%;
   margin: 0 !important;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
 }
-.sidebar-header-btn-toggle:hover{
-background-color:  #ccc9c9;
+.sidebar-header-btn-toggle:hover {
+  background-color: #ccc9c9;
 }
-.list-toggle{
+.list-toggle {
   top: 15% !important;
 }
-.header-div-toggle{
+.header-div-toggle {
   grid-column: 2 / 21;
 }
-.child-div-toggle{
+.child-div-toggle {
   grid-column: 2 / 21;
+}
+
+.child-div::-webkit-scrollbar,
+.description-section::-webkit-scrollbar {
+  background-color: inherit;
+  border: 3px solid transparent;
+}
+.child-div::-webkit-scrollbar-thumb,
+.description-section::-webkit-scrollbar-thumb {
+  background-color: rgb(219, 214, 203);
+  border-radius: 50px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }

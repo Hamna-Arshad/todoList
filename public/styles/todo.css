@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  scroll-behavior: unset;
+}
+.body-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 129, 153);
+}
+/* main divs */
+.parent-div {
+  width: 87%;
+  height: 85%;
+  border-radius: 20px;
+  background-color: rgb(240, 238, 233);
+  box-shadow: 0 0 15px 15px rgb(111, 135, 151);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+/* child div */
+.sidebar-parent {
+  background-color: rgb(233, 228, 220);
+  grid-column: 1 / 6;
+  grid-row: 1/7;
+  border-radius: 20px;
+  margin: 20px;
+}
+/* child div */
+.header-div {
+  grid-column: 6/21;
+  grid-row: 1/2;
+  border-top-right-radius: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+/* child div */
+.child-div {
+  grid-column: 6/21;
+  grid-row: 2/7;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: flex-start;
+  position: relative;
+}
+/* header css */
+.header-div > h1 {
+  font-weight: bold;
+  font-size: 60px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header-div > .horizontal-line {
+  position: absolute;
+  bottom: 10%;
+  color: #000;
+  width: 100%;
+  align-self: center;
+}
+
+/* sidebar */
+
+.menubtn,
+.menubtn > img,
+.stickywallbtn,
+.stickywallbtn > img,
+.todobtn,
+.todobtn > img {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.menudiv,
+.stickywalldiv,
+.tododiv {
+  display: flex;
+}
+.sidebar-parent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sidebar-header {
+  position: absolute;
+  padding-left: 15px;
+  top: 10%;
+  width: 100%;
+  font-size: 40px;
+}
+.listOfbtns {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.menudiv {
+  padding-left: 15px;
+  position: relative;
+}
+.menubtn,
+.menubtn > img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.menudiv > .menubtn {
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  cursor: pointer;
+}
+.tododiv,
+.stickywalldiv {
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+.tododiv:hover,
+.stickywalldiv:hover {
+  background-color: #ccc9c9;
+}
+.tododiv > span,
+.stickywalldiv > span {
+  margin-left: 10px;
+}
+.tododiv > img,
+.stickywalldiv > img {
+  width: 30px;
+  height: 30px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.sidebar-parent-toggle {
+  grid-column: 1 / 2;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 9%;
+  top: 0% !important;
+}
+.sidebar-header-btn-toggle {
+  top: 5%;
+  margin: 0 !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.sidebar-header-btn-toggle:hover {
+  background-color: #ccc9c9;
+}
+.list-toggle {
+  top: 15% !important;
+}
+.header-div-toggle {
+  grid-column: 2 / 21;
+}
+.child-div-toggle {
+  grid-column: 2 / 21;
+}
+
+.child-div > button,
+.child-div > button > img {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.child-div > button {
+  position: absolute;
+  top: 0;
+  background-color: rgb(208, 203, 196);
+}
+.child-div > button > img {
+  padding: 5px;
+}
+
+/*list items*/
+.listitems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  position: relative;;
+  top: 10%;
+  padding: 0.5%;
+  height: fit-content;
+}
+.child-div::-webkit-scrollbar, .listitems > .listitem > .textarea::-webkit-scrollbar {
+  background-color: inherit;
+  border: 3px solid transparent;
+}
+.child-div::-webkit-scrollbar-thumb, .listitems > .listitem > .textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(219, 214, 203);
+  border-radius: 50px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+/* individual item */
+.listitems > .listitem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(233, 228, 220);
+  padding: 10px;
+}
+/* checkbox */
+.listitems > .listitem > .checkbox {
+  width: 25px;
+  height: 25px;
+  accent-color:  rgb(145, 134, 118);
+  cursor: pointer;
+}
+
+.listitems > .listitem > .textarea {
+  width: 92%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  font-size: 20px;
+  text-align: justify;
+  padding-top: 15px;
+}
+
+/*buttons*/
+.addlistitem-button>img, .savelistitem-button>img{
+  background-color: rgb(212, 205, 193);
+}
+.addlistitem-button{
+  margin-left: 0.5%;
+}
+.savelistitem-button{
+  margin-left: 5%;
+}
+.savelistitem-button>img:active, .addlistitem-button>img:active{
+  background-color:  rgb(242, 237, 228);
+}
+.checkedbox{
+  text-decoration: line-through !important;
+}
+.delbtn{
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  position: absolute;
+  right: 2%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+

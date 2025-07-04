@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv";
-
+import todoRoutes from "./routes/todoRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(express.json());
+app.use("/", todoRoutes);
 db.connect();
 // get box information
 async function getBoxColor() {
@@ -138,3 +139,5 @@ app.get("/todoList", (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
+
+export default db;

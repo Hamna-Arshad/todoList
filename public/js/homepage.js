@@ -121,7 +121,7 @@ function addBoxFromData(data) {
   colorpalette.classList.add("colorpalette");
   colorpalette.hidden = true;
   colorpalette.insertAdjacentHTML("beforeend", `
-    <button class="colored-button" style="background-color:#C5F6FA;"></button>
+    <button class="colored-button" style="background-color:#d4e6f1;"></button>
     <button class="colored-button" style="background-color:#E8E0D1;"></button>
     <button class="colored-button" style="background-color:#F3E9C0;"></button>
     <button class="colored-button" style="background-color:#FAC7AB;"></button>
